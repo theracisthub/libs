@@ -167,7 +167,7 @@ function Ocin:Create(title)
         return Updates
     end
 
-    function NormalElements:NewToggle(text, tip, callback)
+    function NormalElements:NewToggle(text, tip, togglealready, callback)
         local TextButton = Instance.new("TextButton")
         local Tip = Instance.new("ImageButton")
         local toggle = false
@@ -198,6 +198,12 @@ function Ocin:Create(title)
                 Duration = 7;
             })
         end)
+
+        if togglealready == true then
+            game:GetService("TweenService"):Create(TextButton,TweenInfo.new(0.15,Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundColor3=OnColor}):Play()
+        else
+            game:GetService("TweenService"):Create(TextButton,TweenInfo.new(0.15,Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundColor3=OffColor}):Play()
+        end
 
         TextButton.MouseButton1Click:Connect(function()
             toggle = not toggle
@@ -834,7 +840,7 @@ function Ocin:Create(title)
             return Updates
         end
 
-        function TabElements:NewToggle(text, tip, callback)
+        function TabElements:NewToggle(text, tip, togglealready, callback)
             local TextButton = Instance.new("TextButton")
             local Tip = Instance.new("ImageButton")
             local toggle = false
@@ -866,6 +872,12 @@ function Ocin:Create(title)
                     Duration = 7;
                 })
             end)
+
+            if togglealready == true then
+                game:GetService("TweenService"):Create(TextButton,TweenInfo.new(0.15,Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundColor3=OnColor}):Play()
+            else
+                game:GetService("TweenService"):Create(TextButton,TweenInfo.new(0.15,Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundColor3=OffColor}):Play()
+            end
     
             TextButton.MouseButton1Click:Connect(function()
                 toggle = not toggle
