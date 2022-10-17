@@ -170,7 +170,7 @@ function Ocin:Create(title)
     function NormalElements:NewToggle(text, tip, togglealready, callback)
         local TextButton = Instance.new("TextButton")
         local Tip = Instance.new("ImageButton")
-        local toggle = false
+        local toggle = togglealready
         local OffColor, OnColor = Color3.fromRGB(0, 0, 0), Color3.fromRGB(91, 91, 91)
 
         TextButton.Parent = ScrollingFrame
@@ -843,7 +843,7 @@ function Ocin:Create(title)
         function TabElements:NewToggle(text, tip, togglealready, callback)
             local TextButton = Instance.new("TextButton")
             local Tip = Instance.new("ImageButton")
-            local toggle = false
+            local toggle = togglealready
             local OffColor, OnColor = Color3.fromRGB(0, 0, 0), Color3.fromRGB(91, 91, 91)
     
             TextButton.Parent = TAB_FRAME
