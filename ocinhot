@@ -499,7 +499,7 @@ function Ocin:Create(title)
         end)
     end
 
-    function NormalElements:NewDropDown(text, tble, callback)
+    function NormalElements:NewDropDown(text, tble, there, callback)
         tble = tble or {}
         local Updates = {}
         local TextButton = Instance.new("TextButton")
@@ -536,7 +536,7 @@ function Ocin:Create(title)
         TextLabel_2.Position = UDim2.new(0.0280000009, 0, 0.589999974, 0)
         TextLabel_2.Size = UDim2.new(0, 86, 0, 11)
         TextLabel_2.Font = Enum.Font.Gotham
-        TextLabel_2.Text = " None"
+        TextLabel_2.Text = " "..tostring(there)
         TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel_2.TextSize = 16.000
         TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
@@ -1169,7 +1169,7 @@ function Ocin:Create(title)
             end)
         end
 
-        function TabElements:NewDropDown(text, tble, callback)
+        function TabElements:NewDropDown(text, tble, there, callback)
             tble = tble or {}
             local Updates = {}
             local TextButton = Instance.new("TextButton")
@@ -1206,7 +1206,7 @@ function Ocin:Create(title)
             TextLabel_2.Position = UDim2.new(0.0280000009, 0, 0.589999974, 0)
             TextLabel_2.Size = UDim2.new(0, 86, 0, 11)
             TextLabel_2.Font = Enum.Font.Gotham
-            TextLabel_2.Text = " None"
+            TextLabel_2.Text = " "..tostring(there)
             TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextLabel_2.TextSize = 16.000
             TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
